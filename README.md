@@ -13,7 +13,7 @@ Docker image description for the backing services (Redis, RabbitMQ)
 
 ## VCAP SERVICES
 
-VCAP_SERVICE shall be used as environment variables.
+VCAP_SERVICE for applications shall be used as environment variables.
 
 ```javascript
 {
