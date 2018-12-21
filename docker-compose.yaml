@@ -1,0 +1,24 @@
+version: '3.3'
+
+services:
+    rabbitmq:
+        image: rabbitmq:3.7.5-management
+        restart: always
+        environment:
+            RABBITMQ_DEFAULT_USER: rmq
+            RABBITMQ_DEFAULT_PASS: pass
+        ports:
+        - 15672:15672
+        - 5672:5672
+        volumes:
+        - ./rabbitmq/enabled_plugins:/etc/rabbitmq/enabled_plugins
+    
+    redis:
+        image: redis:latest
+        restart: always
+        environment:
+        - ALLOW_EMPTY_PASSWORD=yes
+        volumes:
+        - ./redis/redis.conf:/usr/local/etc/redis/redis.conf
+        ports:
+        - 6379:6379
