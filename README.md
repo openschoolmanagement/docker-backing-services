@@ -4,7 +4,7 @@ Docker image description for the backing services (Redis, RabbitMQ)
 ## Prerequistes
 1. Install Docker (https://docs.docker.com/install/#supported-platforms)
 2. Clone the Repo
-3. Run 'docker-compose' in terminal or command line
+3. Run `docker-compose up -f docker-compose.yaml &` in terminal or command line
 
 ## Used Backing Services
 
