@@ -3,7 +3,6 @@ version: '3.3'
 services:
     rabbitmq:
         image: rabbitmq:3.7.5-management
-        name: OSM_RabbitMQ
         restart: always
         environment:
             RABBITMQ_DEFAULT_USER: rmq
@@ -16,7 +15,6 @@ services:
     
     redis:
         image: redis:latest
-        name: OSM_Redis
         restart: always
         environment:
         - ALLOW_EMPTY_PASSWORD=yes
